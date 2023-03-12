@@ -1,0 +1,107 @@
+/* new-courses */
+.new-courses {
+  --nc-max-width: 817px;
+  --nc-color-background: #ffffff;
+  --nc-color-title: #000000;
+  --nc-color-item-bg: #deebfe;
+  --nc-color-item-title: #000000;
+  --nc-color-item-descr: #505050;
+  --nc-color-btn-bg: #2d2d2d;
+  --nc-color-btn-text: #ffffff;
+  width: 100%;
+  max-width: var(--nc-max-width);
+  margin-bottom: 36px;
+  margin-left: 0;
+  padding-top: 70px;
+  overflow: hidden;
+  position: relative;
+}
+.new-courses::after {
+  display: block;
+  content: '';
+  height: calc(100% - 70px - 46px);
+  bottom: 0;
+  right: 0px;
+  width: 100px;
+  background: linear-gradient(90deg, transparent 0%, var(--nc-color-background) 100%);
+  position: absolute;
+  z-index: 10;
+}
+@media (max-width: 768px) {
+  .new-courses::after {
+    width: 50px;
+  }
+}
+.new-courses__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  letter-spacing: -0.02em;
+  color: var(--nc-color-title);
+  margin-bottom: 20px;
+}
+.new-courses .new-course {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-decoration: none;
+  background: var(--nc-color-item-bg);
+  border-radius: 16px;
+  width: 100% !important;
+  flex-shrink: 0;
+  max-width: 220px !important;
+  padding: 16px;
+  min-height: 285px;
+}
+.new-courses .new-course:hover,
+.new-courses .new-course:active,
+.new-courses .new-course:link,
+.new-courses .new-course:visited {
+  text-decoration: none;
+}
+.new-courses .new-course__img-wrap {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 124px;
+  margin-bottom: 20px;
+}
+.new-courses .new-course__img {
+  width: 100%;
+  height: auto;
+}
+.new-courses .new-course__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--nc-color-item-title);
+  margin-bottom: 4px;
+}
+.new-courses .new-course__descr {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--nc-color-item-descr);
+  margin-bottom: 16px;
+}
+.new-courses .new-course__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--nc-color-btn-bg);
+  border-radius: 8px;
+  width: 100%;
+  padding: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--nc-color-btn-text);
+}

@@ -1,0 +1,80 @@
+/* user-progress */
+.user-progress {
+  --up-color-title: #000000;
+  --up-color-course-bg: #f8fafb;
+  --up-color-percent: #000000;
+  --up-color-course-title: #000000;
+  --up-color-course-points: #505050;
+  --up-color-scale-bg: #deebfe;
+  --up-color-scale-progress: #69a5ff;
+  width: 100%;
+  padding: 24px;
+  margin-bottom: 48px;
+}
+.user-progress__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  letter-spacing: -0.02em;
+  color: var(--up-color-title);
+  margin-bottom: 18px;
+}
+.user-progress__course {
+  background: var(--up-color-course-bg);
+  border-radius: 8px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 18px;
+}
+.user-progress__course:not(:last-child) {
+  margin-bottom: 16px;
+}
+.user-progress__scale {
+  position: relative;
+  width: 52px;
+  height: 52px;
+}
+.user-progress__scale svg {
+  transform: rotate(-90deg);
+}
+.user-progress__scale-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 13px;
+  letter-spacing: -0.02em;
+  color: var(--up-color-percent);
+}
+.user-progress__course-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  color: var(--up-color-course-title);
+}
+.user-progress__course-points {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -0.02em;
+  color: var(--up-color-course-points);
+  margin-top: 4px;
+}
+.user-progress__scale svg circle:first-child {
+  stroke: var(--up-color-scale-bg);
+}
+.user-progress__scale svg circle:last-child {
+  stroke: var(--up-color-scale-progress);
+}

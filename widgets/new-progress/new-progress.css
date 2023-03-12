@@ -1,0 +1,101 @@
+/* new-progress */
+.new-progress {
+  --np-color-title: #000000;
+  --np-color-percent: #000000;
+  --np-color-text: #000000;
+  --np-color-text-done-points: #ffffff;
+  --np-color-bg-done-points: #69a5ff;
+  --np-color-text-left-points: #505050;
+  --np-color-bg-left-points: #deebfe;
+  --np-color-scale-bg: #DEEBFE;
+  --np-color-scale: #69A5FF;
+  width: 100%;
+  padding: 0 24px;
+  max-width: 450px;
+  margin: 0 auto 70px;
+}
+.new-progress__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--np-color-title);
+  margin-bottom: 30px;
+}
+.new-progress__wrap {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 124px 1fr;
+  gap: 20px;
+}
+.new-progress__scale {
+  position: relative;
+  width: 124px;
+  height: 124px;
+}
+.new-progress__scale svg {
+  transform: rotate(-90deg);
+}
+.new-progress__scale-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  color: var(--np-color-percent);
+}
+.new-progress__data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+}
+.new-progress__done,
+.new-progress__left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--np-color-text);
+  margin-bottom: 4px;
+}
+.new-progress__done-points {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--np-color-text-done-points);
+  background: var(--np-color-bg-done-points);
+  border-radius: 4px;
+  padding: 4px 10px;
+}
+.new-progress__left-points {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--np-color-bg-left-points);
+  color: var(--np-color-text-left-points);
+  border-radius: 4px;
+  padding: 4px 10px;
+}
+.new-progress__scale svg circle:first-child {
+  stroke: var(--np-color-scale-bg);
+}
+.new-progress__scale svg circle:last-child {
+  stroke: var(--np-color-scale);
+}

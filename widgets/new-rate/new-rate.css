@@ -1,0 +1,60 @@
+/* new-rate */
+.new-rate {
+  --nr-color-title: #000000;
+  --nr-color-tarif-name: #000000;
+  --nr-color-link: #69a5ff;
+  width: 100%;
+  margin-bottom: 64px;
+  padding: 0 24px;
+  max-width: 450px;
+  margin: 0 auto 70px;
+}
+.new-rate__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--nr-color-title);
+  margin-bottom: 16px;
+}
+.new-rate__content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+.new-rate__img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-right: 24px;
+}
+.new-rate__name {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--nr-color-tarif-name);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.new-rate__link {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--nr-color-link);
+  margin-top: 4px;
+  display: block;
+}
+.new-rate__link:hover,
+.new-rate__link:active,
+.new-rate__link:link,
+.new-rate__link:visited {
+  text-decoration: none;
+  color: var(--nr-color-link);
+}

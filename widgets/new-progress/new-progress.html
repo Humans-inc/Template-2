@@ -1,0 +1,53 @@
+<div class="new-progress">
+  <div class="new-progress__title">Прогресс на&nbsp;курсе</div>
+  <div class="new-progress__wrap">
+    <div class="new-progress__scale">
+      <svg
+        viewbox="0 0 124 124"
+        width="124"
+        height="124"
+      >
+        <circle
+          r="56"
+          cx="62"
+          cy="62"
+          fill="none"
+          stroke-width="12"
+          stroke="#ffffff"
+        ></circle>
+        <circle
+          r="59"
+          cx="62"
+          cy="62"
+          fill="none"
+          stroke-width="6"
+          stroke="#ffffff"
+          stroke-linecap="round"
+          stroke-dasharray="277.89 370.52"
+          id="progress"
+        >
+          <animatetransform
+            attributename="transform"
+            type="rotate"
+            from="0 62 62"
+            to="360 62 62"
+            dur="2s"
+            repeatcount="1"
+            begin="click; mousemove"
+          ></animatetransform>
+        </circle>
+      </svg>
+      <div class="new-progress__scale-text">75%</div>
+    </div>
+    <div class="new-progress__data">
+      <div class="new-progress__done">
+        Выполнено
+        <div class="new-progress__done-points">12&nbsp;заданий</div>
+      </div>
+      <div class="new-progress__left">
+        Осталось
+        <div class="new-progress__left-points">5&nbsp;заданий</div>
+      </div>
+    </div>
+  </div>
+</div>
