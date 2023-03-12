@@ -1,0 +1,47 @@
+.gc-main-content.with-left-menu .container {
+  width: 100%;
+  max-width: 1340px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.xdget-trainingList .row {
+  margin: 0;
+}
+.xdget-trainingList .col-md-12 {
+  padding: 0;
+}
+#custom-container {
+  display: grid;
+  grid-template-columns: 1fr 443px;
+  width: 100% !important;
+  margin: 0 !important;
+}
+#main-content {
+  width: 100% !important;
+  max-width: 817px;
+  overflow: hidden;
+  grid-column: 1 / 2;
+}
+#sidebar {
+  width: 100% !important;
+  grid-column: 2 / 3;
+}
+@media (max-width: 1100px) {
+  #custom-container {
+    display: flex;
+    flex-direction: column;
+  }
+  #main-content {
+    order: 2;
+  }
+  #sidebar {
+    width: 100% !important;
+    order: 1;
+  }
+}
+@media (max-width: 568px) {
+  #main-content,
+  #sidebar {
+    padding: 0;
+  }
+}

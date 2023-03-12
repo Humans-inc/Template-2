@@ -1,0 +1,136 @@
+/* new-trainings */
+.new-trainings {
+  --nt-color-title: #000000;
+  --nt-color-container-bg: #f8fafb;
+  --nt-color-training-bg: #ffffff;
+  --nt-shadow-training: 0px 0px 16px rgba(222, 233, 238, 0.47);
+  --nt-color-state-bg: #69a5ff;
+  --nt-color-state-text: #ffffff;
+  --nt-color-training-title: #000000;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.new-trainings__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  color: var(--nt-color-title);
+  margin-bottom: 24px;
+}
+#new-trainings.new-trainings__content,
+.new-trainings__content {
+  background: var(--nt-color-container-bg);
+  border-radius: 24px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.new-trainings .new-training {
+  text-decoration: none;
+  background: var(--nt-color-training-bg);
+  box-shadow: var(--nt-shadow-training);
+  border-radius: 16px;
+  min-height: 180px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.new-trainings .new-training:hover,
+.new-trainings .new-training:active,
+.new-trainings .new-training:link,
+.new-trainings .new-training:visited {
+  text-decoration: none;
+}
+.new-trainings .new-training__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--nt-color-training-title);
+  margin-bottom: 24px;
+}
+.new-trainings .new-training__state {
+  background: var(--nt-color-state-bg);
+  border-radius: 8px;
+  margin-top: auto;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: var(--nt-color-state-text);
+  padding: 6px 10px;
+}
+/* styles for native trainings */
+.stream-table tbody {
+  background: var(--nt-color-container-bg);
+  border-radius: 24px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.xdget-trainingList .stream-table {
+  margin: 0;
+}
+.stream-table tbody tr td {
+  padding: 0;
+  height: 100%;
+  display: block;
+}
+.stream-table tbody tr a {
+  text-decoration: none;
+  background: var(--nt-color-training-bg);
+  box-shadow: var(--nt-shadow-training);
+  border-radius: 16px;
+  min-height: 180px;
+  padding: 16px;
+  padding-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  height: 100%;
+}
+.stream-table tbody tr a::after {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  content: 'Доступен';
+  background: var(--nt-color-state-bg);
+  border-radius: 8px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: var(--nt-color-state-text);
+  padding: 6px 10px;
+}
+.stream-table tbody tr a div {
+  display: none;
+}
+.stream-table a .stream-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--nt-color-training-title);
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1200px) {
+  #new-trainings.new-trainings__content,
+  .new-trainings__content,
+  .stream-table tbody {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
