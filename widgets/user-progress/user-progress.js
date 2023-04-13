@@ -20,19 +20,19 @@ document.addEventListener('DOMContentLoaded', () => {
         scale.classList.add('user-progress__course');
         scale.innerHTML = `
           <div class="user-progress__scale">
-            <svg viewBox="0 0 200 200" width="52">
-              <circle r="80" cx="100" cy="100" fill="none" stroke-width="12" stroke="#ffffff"></circle>
-              <circle id="progress-${index}" r="80" cx="100" cy="100" fill="none" stroke-width="12" stroke="#ffffff" stroke-linecap="round" stroke-dasharray="0 502.4"></circle>
-            </svg>
-            <div class="user-progress__scale-text">0%</div>
+          <svg viewBox="0 0 200 200" width="52">
+          <circle r="80" cx="100" cy="100" fill="none" stroke-width="12" stroke="#DEEBFE"></circle>
+          <circle id="progress-${index}" r="80" cx="100" cy="100" fill="none" stroke-width="12" stroke="#69A5FF" stroke-linecap="round" stroke-dasharray="0 502.4"></circle>
+          </svg>
+          <div class="user-progress__scale-text">0%</div>
           </div>
           <div class="user-progress__course-name">${item.name}
-            <div class="user-progress__course-points">${item.points}</div>
+          <div class="user-progress__course-points">${item.points}</div>
           </div>
         `;
         scalesContainer.append(scale);
 
-        let userProgress = Math.round((+item.points.split(' ')[0] / +item.maxValue) * 100);
+        let userProgress = Math.round((+item.points.split(' ')[0] / +item.maxValue) * 100) > 100 ? 100 : Math.round((+item.points.split(' ')[0] / +item.maxValue) * 100);
         scale.querySelector('.user-progress__scale-text').innerText = `${userProgress}%`;
         const radius = 80;
 
