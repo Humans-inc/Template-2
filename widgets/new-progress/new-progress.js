@@ -17,28 +17,32 @@ document.addEventListener('DOMContentLoaded', () => {
   let userPoint = 0;
   let allPoint = 0;
   let scale = 0;
-  const scaleName = '1 курс';
+  const scaleName = 'Прогресс';
   let scales = document.querySelectorAll('#user-progress tbody tr');
   scales.forEach((item) => {
     if (item.querySelector('a').innerText.includes(scaleName)) {
       userPoint = +item.querySelector('.badge').innerText.split(' ')[0];
       let scaleNameArr = item.querySelector('a').innerText.split('/');
       allPoint = +scaleNameArr[scaleNameArr.length - 1];
-      scale = Math.round((userPoint / allPoint) * 100);
+      scale = Math.round((userPoint / allPoint) * 100) > 100 ? 100 : Math.round((userPoint / allPoint) * 100);
     } else if (item.querySelector('a').innerText.includes('Задания')) {
-      document.querySelector('.new-progress__done-points').innerText = `${
-        item.querySelector('.badge').innerText.split(' ')[0]
-      } ${declOfNum(+item.querySelector('.badge').innerText.split(' ')[0], textForms)}`;
 
-      document.querySelector('.new-progress__left-points').innerText = `${
-        item.querySelector('a').innerText.split('/')[1]
-      } ${declOfNum(+item.querySelector('a').innerText.split('/')[1], textForms)}`;
+      document.querySelector('.new-progress__done-points').innerText = `${item.querySelector('.badge').innerText.split(' ')[0]} ${declOfNum(
+        +item.querySelector('.badge').innerText.split(' ')[0],
+        textForms
+      )}`;
+
+      document.querySelector('.new-progress__left-points').innerText = `${item.querySelector('a').innerText.split('/')[1]} ${declOfNum(
+        +item.querySelector('a').innerText.split('/')[1],
+        textForms
+      )}`;
+
     }
   });
 
   document.querySelector('.new-progress__scale-text').innerText = `${scale}%`;
   const radius = 59;
-
+  
   const progressSVG = document.querySelector('#progress');
 
   const circleLength = 2 * 3.14 * radius;
