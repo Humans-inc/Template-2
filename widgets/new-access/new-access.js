@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     daysAll = Math.abs(toDate - fromDate) / 86400000;
 
     let scale = Math.floor((daysLeft / daysAll) * 100);
-    document.querySelector('.user-progress__scale-text').innerText = `${scale}%`;
+    document.querySelector('.new-access__scale-text').innerText = `${scale}%`;
     const radius = 25;
 
     const circleLength = 2 * 3.14 * radius;
