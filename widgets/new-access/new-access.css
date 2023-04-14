@@ -8,6 +8,8 @@
     margin: 0 auto;
     margin-bottom: 60px;
   --a-color-time-bg: #deebfe;
+  --a-color-scale-bg: #DEEBFE;
+  --a-color-scale: #69A5FF;
 }
 .new-access__scale {
   width: 56px;
@@ -45,4 +47,10 @@
   border-radius: 4px;
   padding: 4px 10px;
   margin-left: auto;
+}
+.user-progress__scale svg circle:first-child {
+    stroke: var(--a-color-scale-bg);
+}
+.user-progress__scale svg circle:last-child {
+    stroke: var(--a-color-scale);
 }
