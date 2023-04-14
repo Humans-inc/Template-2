@@ -33,16 +33,16 @@
 | Переменная | Значение |
 | ------- | -------- |
 | --nl-color-title | цвет заголовка |
-| --nl-color-container-bg | цвет заголовка |
-| --nl-color-lesson-bg | цвет заголовка |
-| --nl-shadow-lesson | цвет заголовка |
-| --nl-color-number-text | цвет заголовка |
-| --nl-color-number-bg | цвет заголовка |
-| --nl-color-lesson-title | цвет заголовка |
-| --nl-color-lesson-descr | цвет заголовка |
-| --nl-color-button-bg | цвет заголовка |
-| --nl-color-button-text | цвет заголовка |
-| --nl-color-lesson-time | цвет заголовка |
+| --nl-color-container-bg | цвет фона блока с уроками |
+| --nl-color-lesson-bg | цвет фона урока |
+| --nl-shadow-lesson | тень урока |
+| --nl-color-number-text | цвет номера урока |
+| --nl-color-number-bg | цвет подложки номера урока |
+| --nl-color-lesson-title | цвет названия урока |
+| --nl-color-lesson-descr | цвет описания урока |
+| --nl-color-button-bg | цвет фона кнопки |
+| --nl-color-button-text | цвет текста на кнопке |
+| --nl-color-lesson-time | цвет дату урока |
 | --nl-has_mission-text | цвет текста урока с заданием |
 | --nl-has_mission-bg | цвет фона урока с заданием |
 | --nl-reached-bg | цвет фона доступного урока |
