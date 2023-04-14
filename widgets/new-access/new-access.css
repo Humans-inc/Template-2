@@ -16,6 +16,7 @@
   height: 56px;
   flex-shrink: 0;
   margin-left: 24px;
+  position: relative;
 }
 .new-access__title {
   font-style: normal;
@@ -48,9 +49,9 @@
   padding: 4px 10px;
   margin-left: auto;
 }
-.user-progress__scale svg circle:first-child {
+.new-access__scale svg circle:first-child {
     stroke: var(--a-color-scale-bg);
 }
-.user-progress__scale svg circle:last-child {
+.new-access__scale svg circle:last-child {
     stroke: var(--a-color-scale);
 }
