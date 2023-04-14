@@ -1,18 +1,13 @@
 .new-access {
-  --na-color-title: #000000;
-  --na-color-text: #000000;
-  --na-color-days-text: #505050;
-  --na-color-days-bg: #deebfe;
-  --na-color-scale-bg: #DEEBFE;
-  --na-color-scale: #69A5FF;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
-  max-width: 420px;
-  margin: 0 auto;
-  margin-bottom: 60px;
+        max-width: 420px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  --a-color-time-bg: #deebfe;
 }
 .new-access__scale {
   width: 56px;
@@ -25,7 +20,7 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
-  color: var(--na-color-title);
+  color: #000000;
 }
 .new-access__data {
   display: flex;
@@ -35,7 +30,7 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
-  color: var(--na-color-text);
+  color: #000000;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -45,15 +40,9 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  color: var(--na-color-days-text);
-  background: var(--na-color-days-bg);
+  color: #505050;
+  background: var(--a-color-time-bg);
   border-radius: 4px;
   padding: 4px 10px;
   margin-left: auto;
-}
-.user-progress__scale svg circle:first-child {
-  stroke: var(--na-color-scale-bg);
-}
-.user-progress__scale svg circle:last-child {
-  stroke: var(--na-color-scale);
 }
