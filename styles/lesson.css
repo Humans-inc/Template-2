@@ -1,0 +1,342 @@
+/* Header */
+
+body {
+    --lesson-color-body-bg: #FFFFFF;
+    --lesson-color-block-bg: #FFFFFF;
+    --lesson-color-header-bg: #F8FAFB;
+    --lesson-color-accent: #69A5FF;
+    --lesson-color-header-btn-bg: #2D2D2D;
+    --lesson-font-family: sans-serif;
+    --lesson-color-text: #000000;
+    --lesson-url-btn-prev: url("data:image/svg+xml,%3Csvg width='12' height='13' viewBox='0 0 12 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 6.5L2 6.5M2 6.5L5 9.5M2 6.5L5 3.5' stroke='white' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    --lesson-url-btn-next: url("data:image/svg+xml,%3Csvg width='12' height='13' viewBox='0 0 12 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6.5H10M10 6.5L7 3.5M10 6.5L7 9.5' stroke='white' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+	background: var(--lesson-color-body-bg);
+}
+.gc-main-content.with-left-menu .container {
+    width: 100%;
+    max-width: 900px;
+}
+@media(max-width: 768px) {
+    .gc-main-content.with-left-menu .container {
+        margin: 0;
+    }
+}
+
+a {
+    color: var(--lesson-color-text);
+    text-decoration: none;
+}
+a:hover, a:focus {
+    color: var(--lesson-color-text);
+}
+.row {
+	margin: 0;    
+}
+
+.lite-page.block-set {
+	background: var(--lesson-color-header-bg);
+    border-radius: 24px;
+    padding: 24px;
+}
+/* header */
+.lesson-header-block {
+    background: var(--lesson-color-header-bg) !important;
+    border-radius: 24px;
+    overflow: hidden;
+    padding: 0px !important;
+    border-bottom: none !important;
+    margin-bottom: 24px !important;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.row.header-view > div {
+    padding: 16px !important;
+    padding-top: 72px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 130px;
+}
+.lesson-title-value {
+    font-family: var(--lesson-font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+	line-height: 99.33%;
+    color: var(--lesson-color-text);
+    text-align: center;
+    margin-top: auto;
+}
+.lesson-description-value {
+	display: none;
+}
+.lesson-navigation {
+    height: 62px;
+    padding: 0px !important;
+}
+.lesson-navigation > table > tbody > tr {
+	display: flex;
+    height: 62px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.text-center.hidden-xs > span {
+	position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: var(--lesson-color-accent);
+	border-radius: 8px;
+    padding: 8px 14px;
+    font-family: var(--lesson-font-family);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+    color: var(--lesson-color-body-bg);
+}
+
+.text-center.hidden-xs {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+}
+.text-center.hidden-xs div {
+    font-family: var(--lesson-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: var(--lesson-color-text);
+}
+.lesson-navigation > table > tbody > tr > td .hidden-xs {
+	display: none;
+}
+.lesson-navigation > table > tbody > tr > td:first-child {
+	display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0px !important;
+}
+.lesson-navigation > table > tbody > tr > td:last-child {
+	display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0px !important;
+}
+.lesson-navigation > table > tbody > tr > td a {
+    width: 100%;
+    height: 33px;
+    background: var(--lesson-color-header-btn-bg) no-repeat center;
+    flex-shrink: 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--lesson-color-body-bg);
+}
+.lesson-navigation > table > tbody > tr > td:first-child a::before {
+    background: no-repeat center;
+	background-image: var(--lesson-url-btn-prev);
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+}
+.lesson-navigation > table > tbody > tr > td:last-child a::after {
+    background: no-repeat center;
+	background-image: var(--lesson-url-btn-next);
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-left: 8px;    
+}
+@media(max-width: 768px) {
+    .lesson-navigation > table > tbody > tr > td:first-child {
+        width: 100%;
+        border-right: 1px solid var(--lesson-color-body-bg);
+    }
+    .lesson-navigation > table > tbody > tr > td:last-child {
+        width: 100%;
+        border-left: 1px solid var(--lesson-color-body-bg);
+    }
+}
+@media(max-width: 480px) {
+    .lesson-navigation > table > tbody > tr > td a {
+        font-size: 12px;
+    }
+}
+
+/* lesson mission */
+.lt-lesson-mission-block {
+    background: var(--lesson-color-block-bg) !important;
+	border-radius: 16px;
+    padding: 28px;
+    color: var(--lesson-color-text);
+    margin-bottom: 40px;
+}
+.lt-lesson-mission-block .container {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.lt-lesson-mission-block .col-md-12 {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.lt-lesson-mission-block h3,
+.lesson-mission-text {
+	font-family: var(--lesson-font-family);
+    border-bottom: none;
+}
+.lesson-mission-wrapper {
+    margin-top: 3px;
+    border: none;
+}
+.answer-form {
+    padding: 0px;
+    background: var(--lesson-color-block-bg);
+}
+.lt-lesson-mission-block textarea {
+    background: var(--lesson-color-header-bg);
+    border-radius: 15px;
+    border: none;
+    padding: 12px;
+    color: var(--lesson-color-text);
+    resize: vertical !important;
+    min-height: 60px;
+    max-height: 150px;
+}
+.lt-lesson-mission-block textarea:focus-visible {
+	outline: none;
+}
+.field-lessonanswer-answer_text .emoji-container {
+    margin-bottom: 28px;
+}
+.lt-lesson-mission-block .uploadifive-button {
+    background: var(--lesson-color-text);
+    border-radius: 4px;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 140%;
+    color: var(--lesson-color-body-bg);
+}
+.lt-lesson-mission-block .uploadifive-button input[type="file"] {
+    cursor: pointer;
+}
+.field-lessonanswer-answer_text .text-muted {
+	color: #505050;
+}
+.lt-lesson-mission-block .btn-send-answer {
+    background: var(--lesson-color-accent);
+    border-radius: 4px;
+    border: none;
+    font-family: var(--lesson-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--lesson-color-body-bg);
+    width: 200px;
+}
+.answer-form .btn-link {
+    padding: 0;
+    color: var(--lesson-color-accent);
+}
+.user-profile-image {
+	border-radius: 50px;
+    border: 2px solid #D9D9D9;
+}
+.self-answers .user-answer {
+    border-top: none;
+}
+.comment-form-wrapper .new-comment-textarea {
+    width: 100%;
+    border: none;
+    min-height: 60px !important;
+    padding: 12px;
+}
+
+.b-notifications-subscribe .button,
+.b-like .button {
+    color: var(--lesson-color-text);
+    cursor: pointer;
+    border-bottom: 1px dotted var(--lesson-color-text);
+}
+.comment-form-wrapper .new-comment .btn-send {
+    background: var(--lesson-color-accent);
+    border-radius: 4px;
+    border: none;
+    font-family: var(--lesson-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--lesson-color-body-bg);
+}
+
+/* lesson comments */
+.lt-lesson-comment-block {
+    background: var(--lesson-color-block-bg) !important;
+	border-radius: 16px;
+    padding: 28px;
+    color: var(--lesson-color-text);
+    margin-bottom: 40px;
+}
+.lt-lesson-comment-block .container {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.lt-lesson-comment-block .col-md-12 {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.user-answer {
+    border-top: none;
+}
+.simple-answer {
+    background: var(--lesson-color-block-bg);
+}
+.lt-lesson-comment-block textarea {
+    background: var(--lesson-color-header-bg);
+    border-radius: 15px;
+    border: none;
+    padding: 12px;
+    color: var(--lesson-color-text);
+    min-height: 60px !important;
+    resize: vertical !important;
+    max-height: 150px;
+}
+.lt-lesson-comment-block textarea:focus-visible {
+	outline: none;
+}
+.lt-lesson-comment-block .btn-send {
+    background: var(--lesson-color-accent);
+    border-radius: 4px;
+    border: none;
+    font-family: var(--lesson-font-family);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--lesson-color-body-bg);
+}
+.lesson-answer-comment {
+    background: var(--lesson-color-block-bg);
+}
+.comments-tree .worker .text {
+    color: var(--lesson-color-text);
+}
+.pseudo-link:hover,
+.pseudo-link {
+    color: var(--lesson-color-text);
+}
