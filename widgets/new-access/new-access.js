@@ -64,11 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Сначала узнаем сколько осталось
 
-    if (daysArr[2].includes('дней' || 'день' || 'дня') && daysArr.length === 3) {
+    if (/де?н[ейяь]/.test(daysArr[2]) && daysArr.length === 3) {
       daysLeft = daysArr[1];
-    } else if (daysArr[2].includes('дней' || 'день' || 'дня') && daysArr.length === 5) {
+    } else if (/де?н[ейяь]/.test(daysArr[2]) && daysArr.length === 5) {
       daysLeft = daysArr[1];
-    } else if (daysArr[2].includes('минут' || 'минуты' || 'минуту') && daysArr.length === 3) {
+    } else if (/минут[ыу]?/.test(daysArr[2]) && daysArr.length === 3) {
       daysLeft = 1;
     } else {
       daysLeft = 0;
