@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const lessonsGC = document.querySelectorAll('.lesson-list li:not(.divider)');
+  const lessonsGC = document.querySelectorAll('.lesson-list li:not(.divider):not(.lesson-is-hidden)');
   const lessonsCustom = document.querySelector('#new-lessons');
   let dataLessons = Array.from(lessonsGC).map((item, index) => {
     return {
