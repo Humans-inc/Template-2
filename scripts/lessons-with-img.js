@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
         .querySelector(".link.title")
         .innerText.replace("просмотрено", ""),
       number: index + 1,
-      itemImg: getComputedStyle(
-        item.querySelector(".item-image")
-      ).getPropertyValue("background-image"),
+      itemImg: item.querySelector(".item-image") ? 
+        getComputedStyle(item.querySelector(".item-image")).getPropertyValue("background-image") : 
+        '',
       href: item
         .querySelector("a")
         .href.replace(`https://${window.location.hostname}`, ""),
